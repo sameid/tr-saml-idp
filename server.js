@@ -49,7 +49,10 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 					return {};
 				},
 				getNameIdentifier: function() {
-					return {};
+					return {
+						nameIdentifier: "kebadi@rhhonda.com",
+						nameIdentifierFormat: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
+					};
 				}
 			};
 		},
