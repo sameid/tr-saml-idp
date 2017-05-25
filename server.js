@@ -62,7 +62,7 @@ async.series({
 	 */
 	issuer: function(next) {
 		// should get the issuer name from system configs
-		next(null, "tr-saml-idp");
+		next(null, "tr:saml:idp");
 	},
 
 	/**
