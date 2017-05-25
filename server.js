@@ -12,7 +12,7 @@
  */
 var async = require("async");
 var _ = require("underscore");
-var saml = require("samlp");
+var samlp = require("samlp");
 var fs = require("fs");
 var express = require("express");
 var path = require("path");
