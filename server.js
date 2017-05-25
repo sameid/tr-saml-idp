@@ -69,10 +69,12 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 
 
 
-	app.get('/auth', function(req, res) {
+	app.get('/auth', function(req, res, next) {
 		console.log("Assertion Request:", options);
 
-		samlp.auth(options)(req, res);
+		samlp.auth(options)(req, res, function (err){
+			console.log(err);
+		});
 	});
 }
 
