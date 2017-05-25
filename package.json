@@ -1,0 +1,22 @@
+{
+  "name": "tr-saml-idp",
+  "description": "",
+  "version": "0.0.1",
+  "author": "Sameid Usmani <sameid.usmani@traderev.com>",
+  "contributors": [],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TradeRev/tr-saml-idp.git"
+  },
+  "bugs": "http://github.com/TradeRev/tr-saml-idp/issues",
+  "engines": {
+    "node": "~6.10.3"
+  },
+  "dependencies": {
+    "async": "2.4.1",
+    "underscore": "1.8.3",
+    "samlp": "*",
+    "express": "*"
+  },
+  "main": "./server"
+}
