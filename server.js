@@ -59,7 +59,7 @@ async.series({
 	issuer: function(next) {
 		// should get the issuer name from system configs
 		next(null, "tr-saml-idp");
-	}
+	},
 
 	/**
 	 * Retrieves the certificate for all SAML requests
@@ -80,7 +80,7 @@ async.series({
 	key: function(next) {
 		// should get private key name from system configs
 		// then should pull private key from S3
-		next(null, fs.readFileSync(path.join(__dirname, 'idp-private-key.pem'));)
+		next(null, fs.readFileSync(path.join(__dirname, 'idp-private-key.pem')));
 	},
 
 	/**
