@@ -48,7 +48,7 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 				getClaims: function() {
 					return {};
 				},
-				getNameIdentifiers: function() {
+				getNameIdentifier: function() {
 					return {};
 				}
 			};
