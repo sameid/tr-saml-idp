@@ -29,7 +29,7 @@ var app = express();
  */
 function _buildAuthRoute(issuer, cert, key, postUrl) {
 
-	app.get('/auth', samlp.auth({
+	var options = {
 		issuer: issuer,
 		cert: cert,
 		key: key,
@@ -46,7 +46,11 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 		recipient: postUrl,
 		destination: postUrl,
 		allowRequestAcsUrl: true
-	}));
+	};
+
+	console.log("Assertion Request:", options);
+
+	app.get('/auth', samlp.auth(options));
 }
 
 async.series({
