@@ -42,6 +42,19 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 				nameIdFormat: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
 			};
 		},
+
+		profileMapper: function() {
+			return {
+				getClaims: function() {
+					return {};
+				},
+				getNameIdentifiers: function() {
+					return {};
+				}
+			};
+		},
+
+		//ignore these values?
 		audience: postUrl,
 		recipient: postUrl,
 		destination: postUrl,
@@ -54,9 +67,13 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 		allowRequestAcsUrl: true
 	};
 
-	console.log("Assertion Request:", options);
 
-	app.get('/auth', samlp.auth(options));
+
+	app.get('/auth', function(req, res) {
+		console.log("Assertion Request:", options);
+
+		samlp.auth(options)(req, res);
+	});
 }
 
 async.series({
