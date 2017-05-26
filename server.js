@@ -38,7 +38,7 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 		},
 		getUserFromRequest: function(req) {
 			return {
-				userName: "kebadi@rhhonda.com",
+				userName: "omcars1@hotmail.com",
 				nameIdFormat: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
 			};
 		},
@@ -50,7 +50,7 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 				},
 				getNameIdentifier: function() {
 					return {
-						nameIdentifier: "kebadi@rhhonda.com",
+						nameIdentifier: "omcars1@hotmail.com",
 						nameIdentifierFormat: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
 					};
 				}
