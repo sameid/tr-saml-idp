@@ -58,19 +58,7 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 		},
 
 		//ignore these values?
-		audience: postUrl,
-		recipient: postUrl,
-		destination: postUrl,
-		acsUrl: postUrl,
-		authnContextClassRef: 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport',
-		signResponse: false,
-		encryptionAlgorithm: 'http://www.w3.org/2001/04/xmlenc#aes256-cbc',
-		keyEncryptionAlgorighm: 'http://www.w3.org/2001/04/xmlenc#rsa-oaep-mgf1p',
-		lifetimeInSeconds: 3600,
-		allowRequestAcsUrl: true
 	};
-
-
 
 	app.get('/auth', function(req, res, next) {
 		console.log("Assertion Request:", options);
