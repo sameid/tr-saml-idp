@@ -38,7 +38,7 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 		},
 		getUserFromRequest: function(req) {
 			return {
-				email: "omcars1@hotmail.com"
+				email: "omcars1@hotmail.com",
 				userName: "testuser1",
 				nameIdFormat: 'urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress'
 			};
