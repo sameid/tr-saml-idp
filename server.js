@@ -58,8 +58,8 @@ function _buildAuthRoute(issuer, cert, key, postUrl) {
 		},
 
 		//ignore these values?
-		audience: postUrl
-		// recipient: postUrl,
+		audience: postUrl,
+		recipient: postUrl
 		// destination: postUrl,
 		// acsUrl: postUrl,
 		// authnContextClassRef: 'urn:oasis:names:tc:SAML:2.0:ac:classes:PasswordProtectedTransport',
